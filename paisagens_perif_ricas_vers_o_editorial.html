@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paisagens Periféricas | A Poética de Francisco Morato</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #F8F7F4; color: #1a1a1a; } 
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Space Grotesk', sans-serif; }
+        
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee { display: inline-block; white-space: nowrap; animation: marquee 20s linear infinite; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 bg-[#F8F7F4]/95 backdrop-blur-sm border-b border-[#e5e5e5]">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center h-20">
+            <a href="#home" class="font-serif font-bold tracking-tighter text-xl md:text-2xl">PAISAGENS PERIFÉRICAS</a>
+            <div class="hidden md:flex space-x-8 text-[10px] uppercase font-bold tracking-[0.2em]">
+                <a href="#livro" class="hover:underline underline-offset-4">O Livro</a>
+                <a href="#estrutura" class="hover:underline underline-offset-4">Capítulos</a>
+                <a href="#autores" class="hover:underline underline-offset-4">Autores</a>
+                <a href="#poesia" class="hover:underline underline-offset-4">Poesia Viva</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="fixed top-20 w-full overflow-hidden bg-black text-white py-1 z-40">
+        <div class="animate-marquee text-[10px] uppercase tracking-[0.3em]">
+            Paisagens Periféricas &bull; Betto Souza &bull; Preto Rafa &bull; Francisco Morato &bull; Paisagens Periféricas &bull; Betto Souza &bull; Preto Rafa &bull; Francisco Morato
+        </div>
+    </div>
+
+    <section id="home" class="min-h-screen flex items-center pt-32 pb-20 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h1 class="font-serif text-5xl md:text-7xl leading-[1.1] mb-8">Poesia de resistência em Francisco Morato.</h1>
+                <div id="poetry-container" class="border-l border-black pl-6 py-2">
+                    <p id="poetry-text" class="text-xl italic font-serif transition-opacity duration-300">"O tijolo baiano que a gente assenta é o mesmo que sustenta a esperança de não cair na curva da história."</p>
+                    <div class="flex space-x-4 mt-6">
+                        <button onclick="prevPoem()" class="text-[10px] uppercase font-bold tracking-[0.2em] hover:underline underline-offset-4">Anterior</button>
+                        <button onclick="nextPoem()" class="text-[10px] uppercase font-bold tracking-[0.2em] hover:underline underline-offset-4">Próximo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <img src="1.png" alt="Capa do livro" class="w-full max-w-sm shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <section id="estrutura" class="py-24 px-6 max-w-6xl mx-auto bg-white border-y border-[#e5e5e5]">
+        <h2 class="text-[12px] uppercase tracking-[0.3em] font-bold mb-16 text-center">A Estrutura da Obra</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <img src="13.png" alt="Capítulo 1" class="w-full h-auto object-cover border border-[#e5e5e5]">
+            <img src="27.png" alt="Capítulo 2" class="w-full h-auto object-cover border border-[#e5e5e5]">
+            <img src="33.png" alt="Capítulo 3" class="w-full h-auto object-cover border border-[#e5e5e5]">
+            <img src="34.png" alt="Capítulo 4" class="w-full h-auto object-cover border border-[#e5e5e5]">
+            <img src="35.png" alt="Capítulo 5" class="w-full h-auto object-cover border border-[#e5e5e5]">
+            <img src="36.png" alt="Capítulo 6" class="w-full h-auto object-cover border border-[#e5e5e5]">
+        </div>
+    </section>
+
+    <section id="autores" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16">
+            <div class="space-y-6">
+                <h3 class="text-3xl font-serif">Roberto Rodrigues de Souza <br><span class="text-sm font-sans uppercase tracking-widest text-gray-500">Betto Souza</span></h3>
+                <p class="text-sm uppercase font-bold tracking-widest text-gray-500">Educador e Curador</p>
+                <p class="leading-relaxed opacity-80">Pesquisador literário pela USP e artista visual. Cofundador do Slam da Cana (2018), Betto dedica sua prática a garantir que a palavra falada encontre abrigo nos espaços públicos de Francisco Morato, atuando na curadoria de bibliotecas e na promoção da bibliodiversidade.</p>
+            </div>
+            <div class="space-y-6">
+                <h3 class="text-3xl font-serif">Rafael Rodrigues de Souza <br><span class="text-sm font-sans uppercase tracking-widest text-gray-500">Preto Rafa</span></h3>
+                <p class="text-sm uppercase font-bold tracking-widest text-gray-500">Poeta</p>
+                <p class="leading-relaxed opacity-80">Poeta de olhar agudo, Rafael traduz a tensão da metrópole. Sua escrita disseca a violência estrutural e o cotidiano de Morato. É a voz que utiliza a poesia como ferramenta de confronto e lucidez histórica, transformando o peso da identidade negra em resistência.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="poesia" class="py-24 px-6 max-w-4xl mx-auto text-center">
+        <h2 class="text-[12px] uppercase tracking-[0.3em] font-bold mb-12">Poesia Viva</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-black text-white p-8 min-h-[200px] flex items-center justify-center">
+                <p class="font-serif italic text-lg">"A periferia é a cidade que não dorme, é o corpo que carrega o peso do cimento e a leveza do sonho."</p>
+            </div>
+            <div class="border border-black p-8 min-h-[200px] flex items-center justify-center">
+                <p class="font-serif italic text-lg">"O tijolo baiano que a gente assenta é o mesmo que sustenta a esperança de não cair na curva da história."</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const poems = [
+            '"O tijolo baiano que a gente assenta é o mesmo que sustenta a esperança de não cair na curva da história."',
+            '"As pernas dormem mais / Que as pessoas / Cabeças despencam / Dos troncos corpos"',
+            '"Vou colar o meu bloco / tudo no canto da rua / na calçada / é que tô construindo um puxadinho"',
+            '"A periferia é a cidade que não dorme, é o corpo que carrega o peso do cimento e a leveza do sonho."'
+        ];
+        let currentIndex = 0;
+
+        function updatePoem() {
+            const el = document.getElementById('poetry-text');
+            el.style.opacity = 0;
+            setTimeout(() => {
+                el.innerText = poems[currentIndex];
+                el.style.opacity = 1;
+            }, 300);
+        }
+
+        function nextPoem() {
+            currentIndex = (currentIndex + 1) % poems.length;
+            updatePoem();
+        }
+
+        function prevPoem() {
+            currentIndex = (currentIndex - 1 + poems.length) % poems.length;
+            updatePoem();
+        }
+    </script>
+
+    <footer class="py-20 text-center border-t border-[#e5e5e5]">
+        <p class="uppercase tracking-widest text-[10px] opacity-60">Paisagens Periféricas © 2026 | Francisco Morato, SP</p>
+    </footer>
+
+</body>
+</html>
